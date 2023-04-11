@@ -48,3 +48,42 @@ export function randomInt(min : number, max : number) : number
 
 	return Math.floor((Math.random() * (max - min)) + min);
 }
+
+/**
+ * Rounds a number to the nearest multiple of another number.
+ * 
+ * @param value The input number.
+ * @param nearest The number to round to the nearest multiple of.
+ * @returns The rounded number.
+ * @author Loren Goodwin
+ */
+export function roundToNearest(value : number, nearest : number) : number
+{
+	return Math.round(value / nearest) * nearest;
+}
+
+/**
+ * Rounds a number down to the nearest multiple of another number.
+ * 
+ * @param value The input number.
+ * @param nearest The number to round down to the nearest multiple of.
+ * @returns The rounded number.
+ * @author Loren Goodwin
+ */
+export function roundDownToNearest(value : number, nearest : number) : number
+{
+	return Math.floor(value / nearest) * nearest;
+}
+
+/**
+ * Rounds a number up to the nearest multiple of another number.
+ * 
+ * @param value The input number.
+ * @param nearest The number to round up to the nearest multiple of.
+ * @returns The rounded number.
+ * @author Loren Goodwin
+ */
+export function roundUpToNearest(value : number, nearest : number) : number
+{
+	return Math.ceil(value / nearest) * nearest;
+}
