@@ -19,7 +19,21 @@ export function centsToUSD(cents : number) : string
 {
 	return usdFormatter.format(cents / 100);
 }
-	
+
+/**
+ * Clamps the given number between the given minimum and maximum values.
+ * 
+ * @param value The value to clamp.
+ * @param min The minimum value.
+ * @param max The maximum value.
+ * @returns The clamped value.
+ * @author Loren Goodwin
+ */
+export function clamp(value : number, min : number, max : number) : number
+{
+	return Math.min(Math.max(value, min), max);
+}
+
 /**
  * Formats an amount of dollars as USD.
  *

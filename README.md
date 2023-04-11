@@ -19,6 +19,22 @@ import { centsToUSD } from "@donutteam/number-utilities";
 const myDollars = centsToUSD(4320); 
 ```
 
+### clamp
+Clamps a number between the given minimum and maximums.
+
+```js
+import { clamp } from "@donutteam/number-utilities";
+
+// 50
+const clamped1 = clamp(127, 25, 50);
+
+// 130
+const clamped2 = clamp(127, 130, 150);
+
+// 127
+const clamped3 = clamp(127, 25, 150);
+```
+
 ### dollarsToUSD
 Takes an amount of dollars and formats it as an amount of US dollars.
 
